@@ -1,0 +1,27 @@
+{
+  "name": "intoduction-to-node",
+  "version": "1.0.0",
+  "description": "## Before the journey",
+  "main": "hero.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest",
+    "prettify":
+      "prettier --single-quote --trailing-comma es5 --write \"./src/**/*.js\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miage-lille/intoduction-to-node-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miage-lille/intoduction-to-node-js/issues"
+  },
+  "homepage": "https://github.com/miage-lille/intoduction-to-node-js#readme",
+  "devDependencies": {
+    "jest": "^22.0.3",
+    "prettier": "^1.9.2"
+  },
+  "dependencies": {}
+}

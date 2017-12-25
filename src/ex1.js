@@ -1,5 +1,5 @@
 function findNextSquare(sq) {
-  //TODO
+  // TODO
 }
 
 module.exports = findNextSquare;

@@ -247,93 +247,15 @@ Now it's time to practice
 
 ### First exercice
 
-Edit ex1.js to follow specifications defined in `src/__tests__/ex1.test.js`
+Edit ex1.js to follow specifications defined in `__tests__/ex1.test.js`
 
 ### Second exercice
 
-Edit ex1.js to follow specifications defined in `src/__tests__/ex2.test.js`
+Edit ex2.js to follow specifications defined in `__tests__/ex2.test.js`
 
 ### Third exercice
 
-you must complete the specifications in `src/__tests__/ex3.test.js` and then
+you must complete the specifications in `__tests__/ex3.test.js` and then
 implement `src/ex3.js`
 
-## Javascript Tooling
-
-Now we will use some tool to improve practice of javascript.
-
-### Prettier
-
-[Prettier](https://prettier.io/) is an opinionated code formatter which have some benefits :
-
-* Use consistent code format accross files
-* Share same format practices between team members
-
-1. install prettier as a dev dependency
-
-```
-npm i -D prettier
-```
-
-2. add `"pretty": "prettier"` to `script` section of your `package.json` which should
-   look like :
-
-```json
-{
-  ...
-  "scripts": {
-    "test": "jest",
-    "prettify":
-      "prettier --single-quote --trailing-comma es5 --write \"./src/**/*.js\" "
-
-  },
-  ...
-}
-```
-
-To understand options you can read [prettier doc](https://prettier.io/docs/en/options.html)
-
-3. If you use VSCode, you can integrate prettier :
-
-* install [prettier plugin ](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-* Alter code user parameters (menu : Code > Préférences > Paramètres ) to :
-
-```
-  "editor.formatOnSave": true,
-  "prettier.singleQuote": true,
-  "prettier.trailingComma": "es5"
-```
-
-4. To use prettier just run
-
-```sh
-npm run prettify
-#or
-./node_modules/.bin/prettier --single-quote --trailing-comma es5 --write "./src/**/*.js"
-```
-
-### ESLint
-
-### Babel
-
-### Pre-commit hook
-
-## Discover node.js
-
-### Create a simple http server
-
-create a `server.js` file with
-
-```js
-var http = require('http');
-var server = http.createServer((request, response) => {
-  response.writeHead(200, { 'Content-Type': 'text/json' });
-  response.write('{"message" : "Aaaaaaarg"}');
-  response.end();
-});
-
-server.listen(8080);
-console.log('Server is listening');
-```
-
-Event loop Async
+Go to next step [Javascript Tooling](./TOOLING.md)

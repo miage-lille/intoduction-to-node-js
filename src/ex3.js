@@ -1,5 +1,5 @@
 function multiply(a, b) {
-  //TODO
+  // TODO
 }
 
 module.exports = multiply;

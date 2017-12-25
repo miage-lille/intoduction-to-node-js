@@ -1,4 +1,4 @@
-const filterIntegers = require('../ex2');
+const filterIntegers = require('../src/ex2');
 
 describe('Return a list filtered with only interger values', () => {
   test('[1,"foo"] should returns [1]', () => {

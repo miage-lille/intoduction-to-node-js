@@ -1,6 +1,6 @@
-const findNextSquare = require('../ex1');
+const findNextSquare = require('../src/ex1');
 
-//an integral perfect square is an integer n such that sqrt(n) is also an integer
+// an integral perfect square is an integer n such that sqrt(n) is also an integer
 describe('Finds the next integral perfect square after the one passed as a parameter', () => {
   test('findNextSquare of 121 should returns 144', () => {
     expect(findNextSquare(121)).toBe(144);

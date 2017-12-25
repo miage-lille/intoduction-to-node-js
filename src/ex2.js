@@ -1,5 +1,5 @@
 function filterIntegers(list) {
-  //TODO
+  // TODO
 }
 
 module.exports = filterIntegers;

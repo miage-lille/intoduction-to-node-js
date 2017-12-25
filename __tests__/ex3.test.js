@@ -1,4 +1,4 @@
-const multiply = require('../ex3');
+const multiply = require('../src/ex3');
 
 describe('Return the product of 2 integers', () => {
   test('multiply(1,2) should return 2', () => {});

@@ -408,7 +408,7 @@ Alter `server.js` to return the result of `findNextSquare` function you define i
 * Since we have setup babel, you should use the `import` syntax instead of requireJS syntax we used in `ex1.test.js`. In `server.js` : `import findNextSquare from './ex1' ;`
 * Get a header `square` from the request as the parameter of the function. [How I do that ?](https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_request_getheader_name)
 * Bundle and run your code
-* Take a look at the bundle - don't do that when your code growth (◔_◔)
+* Take a look at the bundle - don't do that when your code grow (◔_◔)
 * Test with :
 
 ```zsh

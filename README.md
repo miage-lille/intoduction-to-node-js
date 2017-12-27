@@ -214,13 +214,13 @@ superBob.bite(bob);
 
 We will use [Jest](https://facebook.github.io/jest/) as test framework
 
-It will create a [package.json](https://docs.npmjs.com/files/package.json) file
-
 1. install jest as a dev dependency
 
 ```
 npm i -D jest
 ```
+
+`npm i` means "install" and `-D` means "devDependencies" (we use `-S` for "dependencies") and `jest` is the name of the package in the [npm registry](https://www.npmjs.com/package/jest)
 
 2. add `"test": "jest"` to `script` section of your `package.json` which should
    look like :

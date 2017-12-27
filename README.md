@@ -80,7 +80,7 @@ nvm install --lts #install LTS version of node and related npm cli
 ## Bootstrap your project
 
 We will code in Javascript language following the
-[ECMAScrupt2018 specification](https://tc39.github.io/ecma262/) and using
+[ECMAScript2018 specification](https://tc39.github.io/ecma262/) and using
 [node.js runtime](https://nodejs.org/en/docs/). We will use
 [npm as package manager](https://nodejs.org/en/docs/)with
 [npm cli](https://docs.npmjs.com/cli/npm)
@@ -110,23 +110,10 @@ Edit src/hero.js
 
 ```js
 //this is a variable with string type
-let weapon = 'hand';
+let weapon = 'knife';
+weapon = 'hand';
 //this is a reference constante with string type
 const name = 'Negan';
-
-//this is an Object. Object data structure is often used as a product type
-const hero = {
-  name, //= name : name
-  weapon,
-  heart: 5,
-  quote: weap => 'There is always next time, I suppose', //lambda
-  strike: () => (weapon === 'spiked bat' ? 'kill' : 'hurt'), //= if(weapon === 'spiked bat'){return 'kill'}else{return 'hurt'}
-};
-
-console.log('First strike', hero.strike()); //hurt
-weapon = 'spiked bat';
-console.log('Second strike', hero.strike()); // kill : yes you altered the reference
-
 try {
   // The value of a constant cannot change through re-assignment, and it can't be redeclared.
   name = 'Rick';
@@ -134,10 +121,26 @@ try {
   console.log('name is a constant. It can not be changed');
 }
 
+//this is an Object. Object data structure is often used as a product type
+const hero = {
+  name, //= name : name
+  weapon,
+  heart: 5,
+  quote: () => 'There is always next time, I suppose', //lambda = function(){return 'There is always next time, I suppose'}
+  strike: function() {
+    //need to use anonymous function instead of lambda to access `this`
+    return this.weapon === 'spiked bat' ? 'kill' : 'hurt'; //=if(weapon === 'spiked bat'){return 'kill'}else{return 'hurt'}
+  },
+};
+
 // const is a reference constante !
 // object keys are not protected, so the following statement is executed without problem
 hero.name = 'Carl';
 console.log(`A new hero called ${hero.name} is born`);
+
+console.log('First strike', hero.strike()); //hurt
+hero.weapon = 'spiked bat';
+console.log('Second strike', hero.strike()); // kill
 
 // we can enhance hero
 hero.speed = '5';

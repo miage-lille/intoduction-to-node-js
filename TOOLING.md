@@ -57,7 +57,7 @@ npm run prettier
 
 We delegated formatting rules to prettier which alleviates the need for this whole category of rules! Prettier is going to reprint the entire program from scratch in a consistent way, so it's not possible for the programmer to make a mistake there anymore :)
 
-Using ESLint for code quality [rules](https://eslint.org/docs/rules/) avoid a lot of dummy bugs that can be statically detected and encourage best practice in code.
+Using ESLint for code quality [rules](https://eslint.org/docs/rules/) avoid a lot of dummy bugs that can be statically detected and encourage best practices in code.
 
 1. Install ESLint
 
@@ -135,7 +135,7 @@ Run prettier and eslint on your code from exercices 1 to 3. Fix problems that es
 
 ## Pre-commit hook
 
-We defined good practice about code. The last thing we want is to generate GIT DIFF because someone commit before using eslint and prettier.
+We defined good practices about code. The last thing we want is to generate GIT DIFF because someone commit before using eslint and prettier.
 
 If you have your own GIT server you could define pre-commit hooks server-side. But here we're using Github ! (╥﹏╥)
 Sure you could use pre-commit hook client side but each developer need to setup the hook : how to be sure that everybody use the hook ? To do so we will use `lint-staged` and `husky` libs !
@@ -227,7 +227,7 @@ SyntaxError: Unexpected token import
     at bootstrap_node.js:608:3
 ```
 
-It's because node.js doesn't implement the full ECmasript specification. In our exemple, `import` instruction isn't supproted. When you code in Javascript you're dependent to the javascript runtime (node.js which is build on the top of Google V8 engine). In this case, we should just decide to use `requirejs` which is implement by node.js and replace the first line of our code by `const http = require('http');`
+It's because node.js doesn't implement the full Ecmasript specification. In our exemple, `import` instruction isn't supported. When you code in Javascript you're dependent to the javascript runtime (node.js which is build on the top of Google V8 engine). In this case, we should just decide to use `requirejs` which is implement by node.js and replace the first line of our code by `const http = require('http');`
 
 Considering that the market have 4 main engines : Microsoft Chakra, Google V8, Mozilla Servo (written in Rust to replace Gecko and released few month ago), Apple Webkit ; and many minor ones like Oracle Nashorn included in Open JDK.
 
@@ -274,7 +274,7 @@ touch .babelrc
 
 The first preset allow you to [use stage 3](http://babeljs.io/docs/plugins/preset-stage-3/) possibilities like [Object rest spread transform](http://babeljs.io/docs/plugins/transform-object-rest-spread/)
 
-The second preset is more clever : [env preset](https://babeljs.io/docs/plugins/preset-env/) know what to polyfill regarding your runtime target (default node.js version on your computer in our config)
+The second preset is more clever : [env preset](https://babeljs.io/docs/plugins/preset-env/) know what to polyfill regarding your target runtime (default node.js version on your computer in our config)
 
 3. Edit .eslintrc.json
 
